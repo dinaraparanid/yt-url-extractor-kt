@@ -2,12 +2,15 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
 
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
+    `maven-publish`
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.parcelize)
     alias(libs.plugins.serialization)
-    id("maven-publish")
 }
+
+group = "com.github.dinaraparanid"
+version = "1.0.0"
 
 android {
     namespace = "com.paranid5.yt_url_extractor_kt"
@@ -33,11 +36,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
         freeCompilerArgs = listOf("-Xcontext-receivers")
     }
     publishing {
@@ -60,15 +63,14 @@ dependencies {
     }
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.dinaraparanid"
-            artifactId = "YtUrlExtractorKt"
-            version = "1.0.0"
-
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
                 from(components["release"])
+                groupId = "com.github.dinaraparanid"
+                artifactId = "YtUrlExtractorKt"
+                version = "1.0.0"
             }
         }
     }

@@ -9,7 +9,51 @@
 Android library to extract media files from YouTube.
 Library utilises Kotlin Coroutines and is built on top of [Ktor client library](https://ktor.io/) as an extension function.
 
-### Example:
+## **Setup**
+
+1. Add this code snippet to your build.graddle or settings.gradle file:
+
+**Kotlin DSL:**
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven(url="https://jitpack.io") // <- add this
+    }
+}
+```
+
+**Groovy DSL:**
+
+```groovy
+dependencyResolutionManagement { 
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // <- add this
+    }
+}
+```
+
+2. Add dependency to your app level build.gradle:
+
+```kotlin
+dependencies {
+    implementation("com.github.dinaraparanid:YtUrlExtractorKt:x.y.z")
+}
+```
+
+```groovy
+dependencies {
+    implementation 'com.github.dinaraparanid:YtUrlExtractorKt:x.y.z'
+}
+```
+
+## **Example**
 
 1. Create Ktor client:
 
