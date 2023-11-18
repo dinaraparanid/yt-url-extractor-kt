@@ -44,13 +44,13 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.dinaraparanid:YtUrlExtractorKt:x.y.z.w")
+    implementation("com.github.dinaraparanid:yt-url-extractor-kt:x.y.z.w")
 }
 ```
 
 ```groovy
 dependencies {
-    implementation 'com.github.dinaraparanid:YtUrlExtractorKt:x.y.z.w'
+    implementation 'com.github.dinaraparanid:yt-url-extractor-kt:x.y.z.w'
 }
 ```
 
