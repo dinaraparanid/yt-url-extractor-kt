@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
-
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     `maven-publish`
@@ -13,13 +11,16 @@ group = "com.github.dinaraparanid"
 version = "0.1.0.1"
 
 android {
-    namespace = "com.paranid5.yturlextractorkt"
+    namespace = "com.paranid5.yt_url_extractor_kt"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 21
-        version = "1.0"
-        archivesName = "yturlextractorkt"
+        consumerProguardFiles("consumer-rules.pro")
+
+        aarMetadata {
+            minCompileSdk = 21
+        }
     }
 
     buildTypes {
@@ -65,7 +66,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.dinaraparanid"
-                artifactId = "yturlextractorkt"
+                artifactId = "yt-url-extractor-kt"
                 version = "0.1.0.1"
             }
         }

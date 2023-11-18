@@ -23,5 +23,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "YtUrlExtractorKt"
-include(":library")
- 
+include(":yt-url-extractor-kt")
