@@ -17,11 +17,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.paranid5.yturlextractorkt"
         minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
         version = "1.0"
         archivesName = "yturlextractorkt"
     }
