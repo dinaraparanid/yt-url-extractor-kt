@@ -10,20 +10,20 @@ plugins {
 }
 
 group = "com.github.dinaraparanid"
-version = "1.0.0"
+version = "0.1.0.1"
 
 android {
-    namespace = "com.paranid5.yt_url_extractor_kt"
+    namespace = "com.paranid5.yturlextractorkt"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.paranid5.yt_url_extractor_kt"
+        applicationId = "com.paranid5.yturlextractorkt"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         version = "1.0"
-        archivesName = "yt-url-extractor-kt"
+        archivesName = "yturlextractorkt"
     }
 
     buildTypes {
@@ -69,8 +69,8 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.dinaraparanid"
-                artifactId = "YtUrlExtractorKt"
-                version = "1.0.0"
+                artifactId = "yturlextractorkt"
+                version = "0.1.0.1"
             }
         }
     }
