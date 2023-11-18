@@ -1,7 +1,7 @@
 # YtUrlExtractorKt
 
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.0-blue.svg?logo=kotlin)](http://kotlinlang.org)
-[![Jitpack](https://jitpack.io/v/dinaraparanid/YtUrlExtractorKt.svg)](https://jitpack.io/#dinaraparanid/YtUrlExtractorKt)
+[![JitPack](https://jitpack.io/v/dinaraparanid/yt-url-extractor-kt.svg)](https://jitpack.io/#dinaraparanid/yt-url-extractor-kt)
 
 ## **Developer**
 [Paranid5](https://github.com/dinaraparanid)
@@ -44,13 +44,13 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.dinaraparanid:YtUrlExtractorKt:x.y.z.w")
+    implementation("com.github.dinaraparanid:yt-url-extractor-kt:x.y.z.w")
 }
 ```
 
 ```groovy
 dependencies {
-    implementation 'com.github.dinaraparanid:YtUrlExtractorKt:x.y.z.w'
+    implementation 'com.github.dinaraparanid:yt-url-extractor-kt:x.y.z.w'
 }
 ```
 
