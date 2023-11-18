@@ -12,7 +12,13 @@ Library utilises Kotlin Coroutines and is built on top of [Ktor client library](
 
 ## **Setup**
 
-1. Add this code snippet to your build.graddle or settings.gradle file:
+1. Add network permission to your manifest:
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+2. Add this code snippet to your build.graddle or settings.gradle file:
 
 **Kotlin DSL:**
 
@@ -40,7 +46,7 @@ dependencyResolutionManagement {
 }
 ```
 
-2. Add dependency to your app level build.gradle:
+3. Add the dependency to your app level build.gradle:
 
 ```kotlin
 dependencies {
@@ -123,5 +129,13 @@ if (audioUrl == null)
     onExtractionError(YtFilesNotFoundException())
 ```
 
+### Samples
+
+1. [Streaming of audio and livestreaming with Exoplayer](https://github.com/dinaraparanid/Crescendo/blob/24ed03bc2d72006aa5637a9aade568746331778d/app/src/main/java/com/paranid5/crescendo/domain/services/stream_service/StreamService.kt#L694)
+2. [Extract and cache audio files](https://github.com/dinaraparanid/Crescendo/blob/24ed03bc2d72006aa5637a9aade568746331778d/app/src/main/java/com/paranid5/crescendo/domain/services/video_cache_service/VideoCacheService.kt#L199)
+
 ## **System Requirements**
 **Android 5.0** or higher
+
+## **License**
+*GNU Public License V 3.0*
